@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents{
+    width: 50%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header{
+    width: 100%;
+    display: flex;
+}
+.head{
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    background-color: #78B9B5 ;
+    color: white;
+}
+.head:hover, .head:checked{
+    background-color: #0F828C;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/**** timer ****/
+.timer_content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+.time{
+    font-size: 50px;
+    font-weight: bold;
+}
+.btn_area{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+}
+.btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    padding: 9px;
+    text-align: center;
+    border-radius: 20px;
+}
+.start,.stop{
+    width: 45%;
+    background-color: #78B9B5;
+}
+.reset{
+    width: 100%;
+    border: 1px solid rgb(199, 199, 199);
+    margin-top: 10px;
+}
+
+/**** hover setting ****/
+@media (hover: hover) {}
+
+
+
+/************** Laptop **************/
+@media screen and (min-width: 481px){}
+
+
+
+
+
+
+
+/************* mobile **************/
+@media screen and (max-width: 768px){}
