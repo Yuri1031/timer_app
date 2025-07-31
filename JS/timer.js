@@ -1,0 +1,63 @@
+console.log('connected to timer.js!')
+
+const hoursInput = document.getElementById("hours");
+const minutesInput = document.getElementById("minutes");
+const secondsInput = document.getElementById("seconds");
+
+const startBtn = document.querySelector(".start");
+const stopBtn = document.querySelector(".stop");
+const resetBtn = document.querySelector(".reset");
+
+let intervalID;
+
+startBtn.addEventListener("click",() => {
+    console.log("start clicked!");
+
+    let hours = Number(hoursInput.value);
+    let minutes = Number(minutesInput.value);
+    let seconds = Number(secondsInput.value);
+
+    let totalSec = hours * 3600 + minutes * 60 + seconds;
+
+    function countDown(){         
+        totalSec --;
+        if(totalSec >= 0){
+            const hrs = Math.floor(totalSec / 3600);
+            const mins = Math.floor((totalSec % 3600)/60);
+            const sec = Math.floor(totalSec % 60);
+            
+            hoursInput.value = String(hrs).padStart(2,'0');
+            minutesInput.value = String(mins).padStart(2,'0');
+            secondsInput.value = String(sec).padStart(2,'0');
+            if (totalSec === 0) {
+                alert("お時間になりました！");
+            }
+         } else {
+            clearInterval(intervalID)
+            console.log("タイマー終了");
+        }
+    }
+    if (!intervalID) {
+        intervalID = setInterval(countDown, 1000);;
+    }
+});
+
+stopBtn.addEventListener("click",() => {
+    console.log("stop clicked!");
+    clearInterval(intervalID);
+    intervalID = null;
+});
+
+resetBtn.addEventListener("click",() => {
+    console.log("reset clicked!");
+    clearInterval(intervalID);
+    intervalID = null;
+
+    totalSec = 0;
+    hoursInput.value = "00";
+    minutesInput.value = "00";
+    secondsInput.value = "00";
+});
+
+
+

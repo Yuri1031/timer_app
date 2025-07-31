@@ -1,10 +1,16 @@
 <div class="timer_content">
-  <div class="time">00:00:00</div>
+  <div class="time">
+    <input type="number" min="0" max="99" value="00" id="hours"> : 
+    <input type="number" min="0" max="59" value="00" id="minutes"> : 
+    <input type="number" min="0" max="59" value="00" id="seconds">
+  </div>
   <div class="btn_area">
     <div class="btns">
-      <div class="btn start">START</div>
-      <div class="btn stop">STOP</div>
+      <button class="btn start">START</button>
+      <button class="btn stop">STOP</button>
     </div>
-    <div class="btn reset">RESET</div>
+    <button class="btn reset">RESET</button>
   </div>
 </div>
+
+<script src="../JS/timer.js"></script>
