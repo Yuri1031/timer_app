@@ -10,8 +10,22 @@ const resetBtn = document.querySelector(".reset");
 
 let intervalID;
 
+////////////////////////
+
+function setActiveBtn(btn){
+    document.querySelectorAll(".btns .btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+}
+
+////////////////////////
+
+document.addEventListener("DOMContentLoaded", () => {
+    setActiveBtn(startBtn);
+});
+
 startBtn.addEventListener("click",() => {
     console.log("start clicked!");
+    setActiveBtn(stopBtn);
 
     let hours = Number(hoursInput.value);
     let minutes = Number(minutesInput.value);
@@ -38,18 +52,18 @@ startBtn.addEventListener("click",() => {
         }
     }
     if (!intervalID) {
-        intervalID = setInterval(countDown, 1000);;
+        intervalID = setInterval(countDown, 1000);
     }
 });
 
 stopBtn.addEventListener("click",() => {
-    console.log("stop clicked!");
     clearInterval(intervalID);
     intervalID = null;
+
+    setActiveBtn(startBtn);
 });
 
 resetBtn.addEventListener("click",() => {
-    console.log("reset clicked!");
     clearInterval(intervalID);
     intervalID = null;
 
@@ -57,7 +71,6 @@ resetBtn.addEventListener("click",() => {
     hoursInput.value = "00";
     minutesInput.value = "00";
     secondsInput.value = "00";
+
+    setActiveBtn(startBtn);
 });
-
-
-

@@ -10,6 +10,7 @@ let gapTime = 0;
 let startMs = null;
 let intervalWatchID;
 
+////////////////////////
 
 function countUp(){ 
     if (intervalWatchID) return;
@@ -32,13 +33,24 @@ function countUp(){
     }, 10);         
 };
 
+function setActiveBtn(btn){
+    document.querySelectorAll(".btns .btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+}
+
+////////////////////////
+
+
 startWatchBtn.addEventListener("click",() => {
     countUp();
+    setActiveBtn(stopWatchBtn);
 });
 
 stopWatchBtn.addEventListener("click",() => {
     clearInterval(intervalWatchID);
     intervalWatchID = null;
+
+    setActiveBtn(startWatchBtn);
 })
 
 resetWatchBtn.addEventListener("click", () => {
@@ -46,5 +58,7 @@ resetWatchBtn.addEventListener("click", () => {
     gapTime = 0;
     stopwatch.textContent = "00:00:00.000";
     intervalWatchID = null;
+
+    setActiveBtn(startWatchBtn);
 });
 

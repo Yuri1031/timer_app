@@ -18,6 +18,7 @@ body{
     justify-content: center;
     flex-direction: column;
     margin-top: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
 }
 .header{
     width: 100%;
@@ -31,9 +32,12 @@ body{
     background-color: #78B9B5 ;
     color: white;
 }
-.head:hover, .head.active, 
-.btn:hover, .btn.active{
+.head:hover, .btn:hover {
+    background-color: #78B9B5;
+}
+.head.active, .btn.active{
     background-color: #0F828C;
+    color: white;
 }
 .main{
     width: 100%;
@@ -52,7 +56,6 @@ body{
 }
 .time{
     font-size: 50px;
-    font-weight: bold;
     display: flex;
     justify-content: center;
     margin: 0 0 10px 13px;
@@ -71,7 +74,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 40px;
+    padding: 10px 40px;
 }
 .btns{
     width: 100%;
@@ -85,18 +88,36 @@ body{
     border-radius: 20px;
     border: none;
 }
-.start,.stop{
+.start,.stop,.start_stopwatch,.stop_stopwatch{
     width: 45%;
-    background-color: #78B9B5;
+    background-color: #EFEFEF;
 }
-.reset{
+.reset,.reset_stopwatch{
     width: 100%;
-    border: 1px solid rgb(199, 199, 199);
+    border: 1px solid rgb(216, 216, 216);
     margin-top: 10px;
 }
 
-/**** hover setting ****/
-@media (hover: hover) {}
+
+/**** stopwatch ****/
+.boost{
+    width: 40px;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);;
+    margin-top: 10px;
+}
+.boost:hover{
+    width: 40px;
+    background-color: #065084;
+}
+.boost_area{
+    width: 80%;
+    min-height: 150px;
+    border: 1px solid #065084;
+    padding: 20px 40px;
+}
+
+
 
 
 

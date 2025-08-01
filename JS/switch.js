@@ -1,42 +1,72 @@
 console.log('connected to switch.js!')
 
-document.addEventListener("DOMContentLoaded",() => {
+const timerTab = document.getElementById("tabTimer");
+const stopWatchTab = document.getElementById("tabStopWatch");
+
+let scriptLoaded = {
+    timer: false,
+    stopwatch: false
+};
+
+// tabによってmain変更
+function loadPage(file, scriptPath){
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            document.querySelector(".main").innerHTML = data;
+            
+            if (file === "timer.html" && !scriptLoaded.timer) {
+                const script = document.createElement("script");
+                script.src = scriptPath;
+                script.id = "dynamic-script-timer";
+                document.body.appendChild(script);
+                scriptLoaded.timer = true;
+            }
+
+            if (file === "stopwatch.html" && !scriptLoaded.stopwatch) {
+                const script = document.createElement("script");
+                script.src = scriptPath;
+                script.id = "dynamic-script-stopwatch";
+                document.body.appendChild(script);
+                scriptLoaded.stopwatch = true;
+            }
+        })
+        .catch(error => {
+            console.log('読み込みエラー:', error);
+            document.querySelector('.main').innerHTML = "<p>読み込みに失敗しました。</p>";
+        });
+}
+
+// click時にactive
+function tabClicked(){
     document.querySelectorAll(".head").forEach(div => {
         div.addEventListener("click",()=>{
-            const file = div.dataset.file;
-
             // active クラスを全ての head から除去, 今クリックされたタブに active を付与
             document.querySelectorAll(".head").forEach(head => head.classList.remove("active"));
             div.classList.add("active");
-
-            // header内(head tab_timer,head tab_stopwatch)click時にmain変更処理
-            if(file){
-                fetch(file).then(response => response.text())
-                        .then(data => {document.querySelector(".main").innerHTML = data;
-                                // JS読み込み
-                                if (file === "timer.html") {
-                                    const script = document.createElement("script");
-                                    script.src = "../JS/timer.js";
-                                    document.body.appendChild(script);
-                                }            
-
-                                if (file === "stopwatch.html") {
-                                    const script = document.createElement("script");
-                                    script.src = "../JS/stopwatch.js";
-                                    document.body.appendChild(script);
-                                }
-                            })
-                            .catch(error => {
-                                console.log('読み込みエラー:', error);
-                                document.querySelector('.main').innerHTML = "<p>読み込みに失敗しました。</p>";
-                            });
-            }
         });
     }); 
+}
 
-    // head tab_timerをmainに初期表示(tab_timerをクリック)させる
-    const defTab = document.querySelector(".tab_timer");
-    if(defTab){
-        defTab.click();
-    }
+// 初回にtab_timerを表示
+document.addEventListener("DOMContentLoaded", () => {
+    tabClicked();
+    timerTab.click(); 
 });
+
+timerTab.addEventListener("click",() => {
+    console.log("click the timeTab")
+    loadPage("timer.html", "../JS/timer.js");
+})
+
+stopWatchTab.addEventListener("click",() => {
+    console.log("click the stopwatchTab")
+    loadPage("stopwatch.html", "../JS/stopwatch.js");
+})
+
+
+
+
+
+
+    
