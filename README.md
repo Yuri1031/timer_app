@@ -69,7 +69,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     </td>
     <td width="50%">
       <a href="https://gyazo.com/a1a12135bca036c545c5e8604c4b42a2">
-        <img src="https://i.gyazo.com/a1a12135bca036c545c5e8604c4b42a2.gif" alt="Image from Gyazo" width="442"/>
+        <img src="https://i.gyazo.com/a1a12135bca036c545c5e8604c4b42a2.gif" alt="Image from Gyazo" width="100%"/>
       </a>
     </td>
   </tr>
