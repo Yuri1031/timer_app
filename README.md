@@ -15,7 +15,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 ### ⚪︎機能一覧
 <table width="100%" cellspacing="10">
   <tr>
-    <td width="100%" align="center"><b>タイマー機能</b></td>
+    <td width="50%" align="center"><b>タイマー機能</b></td>
     <!-- <td width="50%" align="center"><b>サインイン画面</b></td> -->
   </tr>
   <tr>
