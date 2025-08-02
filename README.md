@@ -50,7 +50,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
   </tr>
   <tr>
     <td width="50%"><a href="https://gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8">
-      <img src="https://i.gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8.gif" alt="Image from Gyazo" width="100"/></a>       </td>
+      <img src="https://i.gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8.gif" alt="Image from Gyazo" width="100%"/></a>       </td>
     <td width="50%">
       <img src="https://github.com/user-attachments/assets/220074e5-00a7-42e3-92b3-7ed207624dd2" width="100%">
     </td>
