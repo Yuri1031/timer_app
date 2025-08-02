@@ -23,7 +23,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <td width="50%"><img src="https://github.com/user-attachments/assets/1fb9be75-fdbc-4ac0-be73-da5b308df40c" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%">タイマー機能です。タイマー設定後に、「START」「STOP」「RESET」の操作が可能です。</td>
+    <td width="50%">「START」「STOP」「RESET」ボタンがあり、タイマー設定後に操作が可能です。ボタンも直感的に使いやすいように工夫しております。</td>
     <td width="50%">タイマーが 00:00:00 になると、アラートでお知らせいたします。</td>
   </tr>
 </table>
