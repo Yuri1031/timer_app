@@ -16,7 +16,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 <table width="100%" cellspacing="10">
   <tr>
     <td width="50%" align="center"><b>タイマー機能</b></td>
-    <!-- <td width="50%" align="center"><b>サインイン画面</b></td> -->
+    <!-- <td width="50%" align="center"><b></b></td> -->
   </tr>
   <tr>
     <td width="50%"><img src="https://github.com/user-attachments/assets/77239507-bf55-4f3d-89dc-ba2d9fd5ee4f" width="100%"></td>
@@ -30,16 +30,16 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 
 <table width="100%" cellspacing="10">
   <tr>
-    <td width="50%" align="center"><b>My page画面</b></td>
-    <td width="50%" align="center"><b>Bookshelf画面</b></td>
+    <td width="50%" align="center"><b>ストップウォッチ機能</b></td>
+    <td width="50%" align="center"><b>ブーストモード</b></td>
   </tr>
   <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/4365a548-85af-4e7e-9d12-98ba090076bc" width="100%"></td>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/af5dd63a-247e-417e-ac61-046ea6e0a999" width="100%"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/05a35f3c-0e5a-4c8b-ae21-89b07f9924f1" width="100%"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/898e4b30-7ee1-4bdd-b5b6-5e007797bacc" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%">アカウント情報の編集(セッティングマークから)、フォロー申請(プロフィール画像下のアイコンから)や、学習記録の確認が可能です。</td>
-    <td width="50%">「＋」でカテゴリーを作成し、単語一覧に遷移できます。</td>
+    <td width="50%">「START」「STOP」「RESET」「BOOST(RESETボタンの下)」ボタンがあり、ストップウォッチに合わせて操作可能です。ボタンも直感的に使いやすいように工夫しております。</td>
+    <td width="50%">「BOOST(RESETボタンの下)」ボタンをクリックすると、ブーストモードとして下部に偉人やキャラクターの名言がスライドショー(ランダム)として表示されます。さらに、</td>
   </tr>
 </table>
 
