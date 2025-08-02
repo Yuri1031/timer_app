@@ -15,16 +15,16 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 ### ⚪︎機能一覧
 <table width="100%" cellspacing="10">
   <tr>
-    <td width="50%" align="center"><b>ログイン画面</b></td>
-    <td width="50%" align="center"><b>サインイン画面</b></td>
+    <td width="100%" align="center"><b>タイマー機能</b></td>
+    <!-- <td width="50%" align="center"><b>サインイン画面</b></td> -->
   </tr>
   <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/c4430d06-5508-4bc8-83ae-9e98b06103f3" width="100%"></td>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/b64d22a3-b9b8-4294-af12-0c7bffca7ba2" width="100%"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/07692061-9782-453d-934a-957390780815" width="100%"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/1fb9be75-fdbc-4ac0-be73-da5b308df40c" width="100%"></td>
   </tr>
   <tr>
-    <td width="50%">グイン後、所定の画面に遷移できます。</td>
-    <td width="50%">情報を登録後、所定の画面に遷移できます。</td>
+    <td width="50%">タイマー機能です。タイマー設定後に、「START」「STOP」「RESET」の操作が可能です。</td>
+    <td width="50%">タイマーが 00:00:00 になると、アラートでお知らせいたします。</td>
   </tr>
 </table>
 
