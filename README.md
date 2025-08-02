@@ -19,7 +19,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <!-- <td width="50%" align="center"><b>サインイン画面</b></td> -->
   </tr>
   <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/07692061-9782-453d-934a-957390780815" width="100%"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/77239507-bf55-4f3d-89dc-ba2d9fd5ee4f" width="100%"></td>
     <td width="50%"><img src="https://github.com/user-attachments/assets/1fb9be75-fdbc-4ac0-be73-da5b308df40c" width="100%"></td>
   </tr>
   <tr>
