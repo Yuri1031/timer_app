@@ -9,14 +9,32 @@ const stopBtn = document.querySelector(".stop");
 const resetBtn = document.querySelector(".reset");
 
 let intervalID;
+let totalSec = 0;
 
 ////////////////////////
-
 function setActiveBtn(btn){
     document.querySelectorAll(".btns .btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 }
 
+function countDown(){         
+    totalSec --;
+    if(totalSec >= 0){
+        const hrs = Math.floor(totalSec / 3600);
+        const mins = Math.floor((totalSec % 3600)/60);
+        const sec = Math.floor(totalSec % 60);
+        
+        hoursInput.value = String(hrs).padStart(2,'0');
+        minutesInput.value = String(mins).padStart(2,'0');
+        secondsInput.value = String(sec).padStart(2,'0');
+        if (totalSec === 0) {
+            alert("お時間になりました！");
+        }
+     } else {
+        clearInterval(intervalID)
+        console.log("タイマー終了");
+    }
+}
 ////////////////////////
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -31,29 +49,20 @@ startBtn.addEventListener("click",() => {
     let minutes = Number(minutesInput.value);
     let seconds = Number(secondsInput.value);
 
-    let totalSec = hours * 3600 + minutes * 60 + seconds;
+    totalSec = hours * 3600 + minutes * 60 + seconds;
 
-    function countDown(){         
-        totalSec --;
-        if(totalSec >= 0){
-            const hrs = Math.floor(totalSec / 3600);
-            const mins = Math.floor((totalSec % 3600)/60);
-            const sec = Math.floor(totalSec % 60);
-            
-            hoursInput.value = String(hrs).padStart(2,'0');
-            minutesInput.value = String(mins).padStart(2,'0');
-            secondsInput.value = String(sec).padStart(2,'0');
-            if (totalSec === 0) {
-                alert("お時間になりました！");
-            }
-         } else {
-            clearInterval(intervalID)
-            console.log("タイマー終了");
+    if (totalSec > 0) {
+        setActiveBtn(stopBtn);
+        countDown();   
+        
+        if (!intervalID) {
+            intervalID = setInterval(countDown, 1000);
         }
+
+     } else {
+        setActiveBtn(startBtn);
     }
-    if (!intervalID) {
-        intervalID = setInterval(countDown, 1000);
-    }
+    
 });
 
 stopBtn.addEventListener("click",() => {

@@ -106,15 +106,62 @@ body{
     border: 1px solid rgb(235, 235, 235);;
     margin-top: 10px;
 }
-.boost:hover{
+.boost:hover,.category:hover{
     width: 40px;
     background-color: #065084;
 }
+.boost.active,.category.active{
+    background-color: #A30000;
+}
 .boost_area{
-    width: 80%;
-    min-height: 150px;
-    border: 1px solid #065084;
-    padding: 20px 40px;
+    display: none;
+    width: 95%;
+    max-width: 600px;
+    min-height: 200px;
+    border: 1px solid #A30000;
+    padding: 15px 15px;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.category_btns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+}
+.category{
+    width: 40px;
+    background-color: #c1c1c1;
+    border: 1px solid rgb(235, 235, 235);
+    margin-right: 10px;
+    margin-top: 10px;
+}   
+.slideshow{
+    width: 100%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.sentence, .name{
+    max-width: 100%;
+    word-break: break-word; 
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.sentence{
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+.name{
+    font-size: 15px;
 }
 
 
