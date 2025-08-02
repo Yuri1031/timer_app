@@ -37,8 +37,14 @@ function countUp(){
 };
 
 function setActiveBtn(btn){
-    document.querySelectorAll(".btn_area .btn").forEach(b => b.classList.remove("active"));
-    if (btn) {
+    document.querySelectorAll(".btn_area .btn").forEach(b => {
+        // boostボタン以外ならactiveを外す
+        if (!b.classList.contains("boost")) {
+            b.classList.remove("active");
+        }
+    });
+
+    if (btn && !btn.classList.contains("boost")) {
         btn.classList.add("active");
     }
 }
@@ -106,7 +112,7 @@ const quotes = {
     { sentence: "実行できてはじめて価値になる", name: "ラリー･ペイジ(Google創業者)" },
     { sentence: "偉大な成功は、失敗する自由から生まれる", name: "マーク･ザッカーバーグ(Facebook創業者)" },
     { sentence: "やる気を起こさせるには、\nとにもかくにも\n「やり始める」のがいちばんだ", name: "小林一三(作家)" },
-    { sentence: "新しいことを勉強してると世の中は怖くありません、\n何もしないで、じっとしているから、怖くなるんです。", name: "" },
+    { sentence: "新しいことを勉強してると\n世の中は怖くありません、\n何もしないで、じっとしているから、\n怖くなるんです。", name: "林家彦六(落語家)" },
     { sentence: "今日できることを明日にのばすな", name: "フランクリン(政治家)" },
     { sentence: "考えは言葉となり、言葉は行動となり、\n行動は習慣となり、習慣は人格となり、\n人格は運命となる", name: "マーガレット・サッチャー(イギリスの首相)" },
     { sentence: "私は決して落ち込んだりしない,\nうまくいかない方法を一つ捨てるたびに、\nまた前進しているのだから", name: "" },
@@ -120,7 +126,7 @@ const quotes = {
   book: [
     { sentence: "俺の敵はだいたい俺です。", name: "南波六太(宇宙兄弟)" },
     { sentence: "ちょっとだけ無理なことに挑戦してこーぜ", name: "南波六太(宇宙兄弟)" },
-    { sentence: "道を選ぶということは、\nかならずしも歩きやすい安全な道をえらぶってことじゃないんだぞ", name: "ドラえもん(ドラえもん)" },
+    { sentence: "道を選ぶということは、\nかならずしも歩きやすい安全な道を\nえらぶってことじゃないんだぞ", name: "ドラえもん(ドラえもん)" },
     { sentence: "大事なのは強いか弱いかではなくて、\n自分の力で立ち向かったって事ですよ", name: "(セキレイ)" },
     { sentence: "他人のために労を厭わない奴に\n人は付いていくものだ", name: "(銀の匙)" },
     { sentence: "意味のないことをたくさんするのが\n人生なんじゃよ", name: "友蔵(ちびまる子ちゃん)" },
@@ -128,7 +134,7 @@ const quotes = {
     { sentence: "不安は努力の勲章なんだ", name: "(ドラゴン桜)" },
     { sentence: "ところで平凡な俺よ。\n下を向いている暇はあるのか", name: "(ハイキュー!!)" },
     { sentence: "他人の世界をうらやんでいても仕方ない。\n自分の世界は自分で変えなければ", name: "(のだめカンタービレ)" },
-    { sentence: "何とかなる。\nそれは、やることをちゃんとやってる人のセリフ", name: "(ムーミン)" },
+    { sentence: "何とかなる。\nそれは、やることをちゃんとやってる人の\nセリフ", name: "(ムーミン)" },
     { sentence: "道草を楽しめ。大いにな", name: "(HUNTER × HUNTER)" },
     { sentence: "人間つまずくのは\n恥ずかしいことじゃない！\n立ち上がらない事が恥ずかしいんだぞ！", name: "両津勘吉(こちら葛飾区亀有公園前派出所)" },
     { sentence: "才能も発展も人生も、\nいざって時に退いたら終わりだ。", name: "ヨレンタ(チ。―地球の運動について―)" },
@@ -167,7 +173,7 @@ function startSlideShow(category = null){
     const showRandomQuote = () => {
         currentShow = Math.floor(Math.random() * list.length);
         showContent(list, currentShow);
-        slideShowTimeID = setTimeout(showRandomQuote, 3000);
+        slideShowTimeID = setTimeout(showRandomQuote, 3500);
     };
 
     showRandomQuote();    

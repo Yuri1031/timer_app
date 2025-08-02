@@ -12,7 +12,8 @@ body{
 }
 .contents{
     width: 50%;
-    height: auto;
+    max-width: 500px;
+    min-width: 500px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -169,7 +170,8 @@ body{
 
 
 /************** Laptop **************/
-@media screen and (min-width: 481px){}
+@media screen and (min-width: 481px){
+}
 
 
 
