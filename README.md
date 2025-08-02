@@ -1,16 +1,19 @@
 # ⚪︎Timer & Stopwatch機能
 <br>
 
+
 ## ⚪︎アプリケーション概要
 タイマーをストップウォッチ機能を実装いたしました。
 <br>
+
 
 ## ⚪︎開発のきっかけ
 JavaScriptの理解を深めるため、個人的な実践練習として作成いたしました。<br>
 制作にあたって、タイマーやストップウォッチについて考えたところ、<br>
 過去に友人が勉強時間を記録するために、ストップウォッチアプリを活用していたことを思い出しました。<br>
-そこで、単に時間を測るだけではなく、ふと疲れたときや集中力が切れそうなときに、モチベーションを高めたり、そっと背中を押したりできるような機能「ブーストモード」をオリジナルで実装いたしました。「ブーストモード」の詳しい内容は以下に記させていただきます:)
+そこで、単に時間を測るだけではなく、ふと疲れたときや集中力が切れそうなときに、モチベーションを高めたり、そっと背中を押すことができるような機能、「ブーストモード」をオリジナルで実装いたしました。「ブーストモード」の詳しい内容は以下に記させていただきます:)
 <br>
+
 
 ### ⚪︎機能一覧
 <table width="100%" cellspacing="10">
@@ -45,221 +48,40 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 
 <table width="100%" cellspacing="10">
   <tr>
-    <td width="50%" align="center"><b>タイマー動作</b></td>
-    <td width="50%" align="center"><b>単語詳細画面</b></td>
+    <td width="50%" align="center"><b>タイマー動作紹介</b></td>
+    <td width="50%" align="center"><b>ストップウォッチ動作紹介</b></td>
   </tr>
   <tr>
-    <td width="50%"><a href="https://gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8">
-      <img src="https://i.gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8.gif" alt="Image from Gyazo" width="100%"/></a>       </td>
     <td width="50%">
-      <img src="https://github.com/user-attachments/assets/220074e5-00a7-42e3-92b3-7ed207624dd2" width="100%">
+      <a href="https://gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8">
+        <img src="https://i.gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8.gif" alt="Image from Gyazo" width="100%"/>
+      </a>
+    </td>
+    <td width="50%">
+      <a href="https://gyazo.com/a1a12135bca036c545c5e8604c4b42a2">
+        <img src="https://i.gyazo.com/a1a12135bca036c545c5e8604c4b42a2.gif" alt="Image from Gyazo" width="442"/>
+      </a>
     </td>
   </tr>
   <tr>
-    <td width="50%">「＋」ボタンで単語を作成、その後単語詳細に遷移できます。</td>
-    <td width="50%">ハンバーガーメニュー内で単語カードの編集・削除・グループへ共有ができるようになっています。また、"苦手と感じたカード"は下部のトグルボタンをONにすることで、Study内の「本日のタスク」で復習することが可能です。</td>
-  </tr>
-</table>
-
-<table width="100%" cellspacing="10">
-  <tr>
-    <td width="50%" align="center"><b>単語新規登録・編集画面</b></td>
-    <!--
-    <td width="50%" align="center"><b></b></td>
-    -->
-  </tr>
-  <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/67c0b5bd-388f-4b2b-8ecd-3c7a37d6f6a8" width="100%"></td>
-    <td></td>
-    <!--
-    <td width="50%"><img src="" width="100%"></td>
-    -->
-  </tr>
-  <tr>
-    <td width="50%">リッチエディターにより、より柔軟に単語カードの作成が可能になっています。</td>
-    <!--
     <td width="50%"></td>
-     -->
-  </tr>
-</table>
-
-<table width="100%" cellspacing="10">
-  <tr>
-    <td width="50%" align="center"><b>Study画面</b></td>
-    <td width="50%" align="center"><b>Study詳細画面</b></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/9103a9d6-cdf0-4a68-8e34-3d442ec67b91" width="100%"></td>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/a092c7b6-e865-4d9f-8f28-63143fd23289" width="100%"></td>
-  </tr>
-  <tr>
-    <td width="50%">単語の見返しを目的にした仕様になっています。画面内には、「本日のタスク」と各「カテゴリー一覧」が表示されています。「本日のタスク」は間違えた単語を再度学習し、再び間違えたものに関しては3日後に表示されるようになっています。「カテゴリー一覧」は詳細表示に遷移すできるようになっています。</td>
-    <td width="50%">「すべて or マークのみ」「順番 or ランダム」のフィルターを設定し、自由に単語の学習が行える様になっています。</td>
-  </tr>
-</table>
-
-<table width="100%" cellspacing="10">
-  <tr>
-    <td width="50%" align="center"><b>Group画面</b></td>
-    <td width="50%" align="center"><b>Group詳細画面</b></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/4a50d248-6f45-4b2b-87e5-c46885e0e61b" width="100%"></td>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/20654bc3-cf73-4d3a-abe3-050f231ce796" width="100%"></td>
-  </tr>
-  <tr>
-    <td width="50%">「＋」ボタンのグループ作成や、グループの一覧を表示し、グループ詳細画面に遷移できる様になっています。</td>
-    <td width="50%">グループアカウント情報の変更や単語の一覧表示ができる様になっています。単語一覧では、共有した単語カードが共有者の名前とともに表示され、単語詳細画面に遷移できる様になっています。</td>
+    <td width="50%"></td>
   </tr>
 </table>
 <br>
 
-### ⚪︎ER図
-<img width="489" alt="Image" src="https://github.com/user-attachments/assets/c3725b72-ac6e-42b7-a1fd-946acbe24a48" />
-<br>
-
-### ⚪︎データベース設計
-#### users テーブル -------------------------------------------
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| name               | string     | null: false                    |
-| nickname           | string     | null: false                    |
-| color_id           | integer    | null: false                    | ← ActiveHashを使用。
-| profile_pic        | text       |                                | ← ActiveStorageを使用。
-| email              | string     | null: false, unique: true      |
-| encrypted_password | string     | null: false                    |
-- has_many :categories, dependent: :destroy
-- has_many :words
-- has_many :word_categories, through: :words, source: :category
-- has_many :groups, through: :group_members
-- has_many :group_members
-- has_many :group_words
-- has_many :word_marks, dependent: :destroy
-
-#### words テーブル -------------------------------------------
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| title              | string     | null: false                    |
-| question           | text       | null: false                    |
-| answer             | text       | null: false                    |
-| img                | string     |                                | ← ActiveStorageを使用。
-| user               | references | null: false, foreign_key: true |
-| category           | references | null: false, foreign_key: true |
-- belongs_to :user
-- belong_to :category
-- has_many :word_marks, dependent: :destroy
-- has_many :group_words, dependent: :destroy
-- has_many :groups, through: :group_words
-
-
-#### categories テーブル -------------------------------------------
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| category_name      | string     | null: false, unique: true      |
-| category_img       | string     |                                | ← ActiveStorageを使用。
-| user               | references | null: false, foreign_key: true |
-- belong_to :user
-- has_many :words, dependent: :destroy
-
-#### word_marks テーブル -------------------------------------------
-| Column             | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| review_date        | datetime   |                                |
-| mark_type          | integer    |                                |
-| user               | references | null: false, foreign_key: true |
-| word               | references | null: false, foreign_key: true |
-- belongs_to :user
-- belong_to :word
-
-#### groups テーブル -------------------------------------------
- Column              | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| group_name         | string     | null: false                    |
-| group_img          | string     |                                | ← ActiveStorageを使用。
-| group_description  | text       | null: false                    |
-| user               | references | null: false, foreign_key: true |
-- belongs_to :user
-- has_many :users, through: :group_members
-- has_many :group_members, dependent: :destroy
-- has_many :group_words, dependent: :destroy
-- has_many :words, through: :group_words
-
-#### group_members(中間)テーブル -------------------------------------------
- Column              | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| user               | references | null: false, foreign_key: true |
-| group              | references | null: false, foreign_key: true |
-- belongs_to :user
-- belongs_to :group
-
-#### group_words(中間)テーブル -------------------------------------------
- Column              | Type       | Options                        |
-| ------------------ | ---------- | ------------------------------ |
-| user               | references | null: false, foreign_key: true |
-| group              | references | null: false, foreign_key: true |
-| word               | references | null: false, foreign_key: true |
-- belongs_to :user
-- belongs_to :word
-- belongs_to :group
-<br>
 
 ### ⚪︎工夫した点
 <details>
-<summary>１. グループデータベースの最適化</summary>
-
-- ユーザーの所属グループ管理と、各グループで共有される単語の関係を明確に分離するため、group_members テーブルと group_words テーブルを別々に設計しました。これにより、単語の共有履歴やアクセス制御の柔軟な拡張ができる様になっております。
+<summary>１. ユーザビリティとデザインの工夫</summary>
+- タイマーやストップウォッチの基本的な機能に加え、ユーザーが次にどのボタンを押すべきか視覚的、尚且つ直感的にわかるように工夫いたしました。
 </details>
 
 <details>
-<summary>２. 復習機能のユーザビリティ向上</summary>
-
-- 単語カードにマークボタンを設けることで、苦手を明確化できるようにしました。
-- 苦手とマークされた単語カードは「本日のタスク」として集約され、一括学習を可能にしております。
-- さらに「本日のタスク」内で苦手とマークした単語は、3日後に再表示され記憶の定着を実現しております。
-</details>
-
-<details>
-<summary>3. ユーザビリティとデザインの工夫</summary>
-
-- ユーザーが直感的に操作できるよう、シンプルなデザインを心掛けました。
-- 視覚的にわかるよう、新規登録は「＋」、削除は「×」といったマーク中心のデザインを意識しビューを作成しております。
+<summary>２. ブーストモード</summary>
+- 「ブーストモード」には「ランダム(初期設定)」「偉人名言」「キャラクター名言」とカテゴリー分けされており、ユーザーの気分にあったものを選べるようにしております。
+- タイマーやストップウォッチの本来の機能を損なわせないために、「ブーストモード」ボタンは、あえて控えめなデザイン(カーソルを合わせると現れるデザイン)にしております。
+- しかし、1度選択したらモチベーションアップのため目立つようにデザインしております。
 </details>
 <br>
 
-## ⚪︎今後の課題及び追加予定機能
-<details>
-<summary>1. カテゴリー表示について</summary>
-
-- カテゴリー内にさらにカテゴリーを作成し、より単語カードを整理できるようにする。
-</details>
-
-<details>
-<summary>2. 単語作成機能　　（✔︎実装済み）</summary>
-
-- 文字だけでなくマーカーや画像・動画等といったコンテンツも保存できる様にする。
-</details>
-
-<details>
-<summary>3. 通知機能の強化</summary>
-
-- お知らせ機能を追加し、フォローや復習の有無をお知らせさせる。
-</details>
-
-<details>
-<summary>4. グループ内質問チャット機能の実装</summary>
-
-- グループ内の単語に関して、チャット機能を設けて質問・回答を可能にし、理解を深める場にする。
-</details>
-
-<details>
-<summary>5. 単語カードの保存機能の実装</summary>
-
-- 共有されているグループ内の単語を自分のカードとして保存できる様にする。
-</details>
-
-<details>
-<summary>6. スマホ画面対応</summary>
-
-- 画面デザインをスマホ画面対応にする。
-</details>
-<br>
