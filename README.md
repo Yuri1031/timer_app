@@ -45,12 +45,15 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 
 <table width="100%" cellspacing="10">
   <tr>
-    <td width="50%" align="center"><b>単語一覧画面</b></td>
+    <td width="50%" align="center"><b>タイマー動作</b></td>
     <td width="50%" align="center"><b>単語詳細画面</b></td>
   </tr>
   <tr>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/91b75284-9e9e-4dd5-8592-0ed001c9de54" width="100%"></td>
-    <td width="50%"><img src="https://github.com/user-attachments/assets/220074e5-00a7-42e3-92b3-7ed207624dd2" width="100%"></td>
+    <td width="50%"><a href="https://gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8">
+      <img src="https://i.gyazo.com/e5a871c59ed67d3f2ad580de40d4d0e8.gif" alt="Image from Gyazo" width="100"/></a>       </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/220074e5-00a7-42e3-92b3-7ed207624dd2" width="100%">
+    </td>
   </tr>
   <tr>
     <td width="50%">「＋」ボタンで単語を作成、その後単語詳細に遷移できます。</td>
