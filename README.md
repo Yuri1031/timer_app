@@ -99,9 +99,9 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 <details>　
   <summary> ※作成時に気になったメソッド等、見返せるよう自身の学習メモとしてこちらに保管しております。</summary>
   <details>
-    <summary>・非同期処理による、画面の入れ替え</summary>
+    <summary>非同期処理による、画面の入れ替え</summary>
     実装箇所：「timer」「stopwatch」タブをそれぞれクリックすると、<div class="main">箇所がタブにあったビューを表示する。<br>
-    ```HTML
+    ```html
         <div class="header">
             <button class="head tab_timer" data-file="timer.html" id="tabTimer">timer</button>
             <button class="head tab_stopwatch" data-file="stopwatch.html" id="tabStopWatch">stopwatch</button>
@@ -110,6 +110,6 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
           <!-- switch.jsにて"timer.html""stopwatch.html"を表示 -->
         </div>
     ```
-    ```JavaScript
+    ```javascript```
   </details>
 </details>
