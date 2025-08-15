@@ -96,13 +96,12 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 <br>
 
 ## ⚪︎Making of this app 
-<details>　
-  <summary> ※作成時に気になったメソッド等、見返せるよう自身の学習メモとしてこちらに保管しております。</summary>
-  <details>
+作成時に気になったメソッド等、見返せるよう自身の学習メモとしてこちらに保管しております。</summary>
+<details>
     <summary>非同期処理による、画面の入れ替え</summary>
-    実装箇所：「timer」「stopwatch」タブをそれぞれクリックすると、<div class="main">箇所がタブにあったビューを表示する。<br>
+    実装箇所：「timer」「stopwatch」タブをそれぞれクリックすると、タブに対応したビューを<div class="main">箇所に表示させる。<br>
       
-    ```html
+    ```html:layout.html
         <div class="header">
             <button class="head tab_timer" data-file="timer.html" id="tabTimer">timer</button>
             <button class="head tab_stopwatch" data-file="stopwatch.html" id="tabStopWatch">stopwatch</button>
@@ -111,7 +110,51 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
           <!-- switch.jsにて"timer.html""stopwatch.html"を表示 -->
         </div>
     ```
+
     
-    ```javascript```
-  </details>
+    ```javascript:switch.js
+       function loadPage(file, scriptPath){
+          fetch(file)　　　　　　　　　　　　　　　　　　　　　　// fetch(※)でfileを受け取る
+              .then(response => response.text())　　　　　　// 受け取ったfileをtextに変換
+              .then(data => {
+                  document.querySelector(".main").innerHTML = data;　　// layout.htmlのmain内 = dataと定義
+                  
+                  if (file === "timer.html" && !scriptLoaded.timer) {　// もしfileが"timer.html"でscriptLoaded.timer=falseの場合、
+                      const script = document.createElement("script"); // ↓
+                      script.src = scriptPath;                         // ↓
+                      script.id = "dynamic-script-timer";              // 「<script src="scriptPath" id="dynamic-script-timer"></script>」を作成
+                      document.body.appendChild(script);               // body内に↑を格納
+                      scriptLoaded.timer = true;                       // scriptLoaded.timer = true にする
+                  }
+      
+                  if (file === "stopwatch.html" && !scriptLoaded.stopwatch) { // 以下省略
+                      const script = document.createElement("script");
+                      script.src = scriptPath;
+                      script.id = "dynamic-script-stopwatch";
+                      document.body.appendChild(script);
+                      scriptLoaded.stopwatch = true;
+                  }
+              })
+              .catch(error => {
+                  console.log('読み込みエラー:', error);
+                  document.querySelector('.main').innerHTML = "<p>読み込みに失敗しました。</p>";
+              });
+        }
+    ```
+    <table width="80%" cellspacing="10">
+  <tr>
+    <td width="50%" align="center"><b>fetch</b></td>
+    <td width="50%" align="center">
+      <b>HTTPリクエスト（API通信）を非同期で行うJavaScriptのメソッド。<br>
+        レスポンスそのもの（Response オブジェクト） を返すため、直接 HTML 文字列ではない。response.text() などで「中身」を取り出す必要がある。<br>
+        イメージ: fetch() → 手紙をもらう / response.text() → 封筒を開けて中の手紙を読む 
+      </b>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center"><b>catch</b></td>
+    <td width="50%" align="center"><b>fetchでエラー(404など)が起きた場合の処理を記述。</b></td>
+  </tr>
+</table>
+
 </details>
