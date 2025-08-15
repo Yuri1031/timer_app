@@ -145,17 +145,79 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 ```
   <table width="80%" cellspacing="10">
     <tr>
-      <td width="30%" align="left"><b>fetch</b></td>
+      <td width="20%" align="left"><b>fetch</b></td>
       <td width="80%" align="left">
-        <b>HTTPリクエスト（API通信）を非同期で行うJavaScriptのメソッド。<br>
+        <b>HTTPリクエスト（API通信）を非同期で行うJavaScriptメソッド。<br>
           レスポンスそのもの（Response オブジェクト） を返すため、直接 HTML 文字列ではない。response.text() などで「中身」を取り出す必要がある。<br>
           イメージ: fetch() → 手紙をもらう / response.text() → 封筒を開けて中の手紙を読む 
         </b>
       </td>
     </tr>
     <tr>
-      <td width="30%" align="left"><b>catch</b></td>
+      <td width="20%" align="left"><b>catch</b></td>
       <td width="80%" align="left"><b>fetchでエラー(404など)が起きた場合の処理を記述。</b></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary>setIntervalメソッド</summary>
+  - 「start」ボタン等をそれぞれクリックすると、カウントダウンが行われる。<br>
+      
+```html
+　　// timer.html
+　　<div class="btn_area">
+      <div class="btns">
+        <button class="btn start active">START</button>
+        <button class="btn stop">STOP</button>
+      </div>
+      <button class="btn reset">RESET</button>
+  </div>
+```
+<br>
+
+```javascript
+   // timer.js
+   startBtn.addEventListener("click",() => {
+      console.log("start clicked!");
+      setActiveBtn(stopBtn);
+  
+      let hours = Number(hoursInput.value);
+      let minutes = Number(minutesInput.value);
+      let seconds = Number(secondsInput.value);
+  
+      totalSec = hours * 3600 + minutes * 60 + seconds;
+  
+      if (totalSec > 0) {                 // totalSecが0より大きい場合...
+          setActiveBtn(stopBtn);
+          countDown();   　               // function countDownで定義した処理を行う
+          
+          if (!intervalID) {             // intervalIDが無い場合...
+              intervalID = setInterval(countDown, 1000);   // 「1秒ごとにcountDown処理を繰り返す」= intervalIDと定義(※stopする時に必要)
+          }
+  
+       } else {
+          setActiveBtn(startBtn);
+      }
+      
+  });
+```
+  <table width="80%" cellspacing="10">
+    <tr>
+      <td width="20%" align="left"><b>setInterval()</b></td>
+      <td width="80%" align="left">
+        <b>一定間隔ごとに繰り返し処理を実行するJavaScriptメソッド。<br>
+          「console.log(id); // 例えば 1, 2, 3 」のようなIDを返すためIDの定義を行う必要がある。（timer.js※部分）<br>
+          setInterval(関数, ミリ秒);<br>
+        　関数: 実行したい関数または処理（無名関数でもOK）/　ミリ秒: 実行する間隔（1000 = 1秒）<br>
+          ！注意！<br>
+          実行時間が長いと、処理が間に合わずズレが出ることも。時間の正確性が重要な場面では、setTimeout() をループさせる方法もある。
+        </b>
+      </td>
+    </tr>
+    <tr>
+      <td width="20%" align="left"><b>clearInterval()</b></td>
+      <td width="80%" align="left"><b>setInterval()の繰り返し処理を停止する。<br>setInterval()で定義したIDをclearInterval()に渡すと停止できる。</b></td>
     </tr>
   </table>
 </details>
