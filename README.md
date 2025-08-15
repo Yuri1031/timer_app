@@ -161,7 +161,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 </details>
 
 <details>
-  <summary>setIntervalメソッド</summary>
+  <summary>setInterval メソッド</summary>
   - 「start」ボタン等をそれぞれクリックすると、カウントダウンが行われる。<br>
       
 ```html
@@ -206,7 +206,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <tr>
       <td width="20%" align="left"><b>setInterval()</b></td>
       <td width="80%" align="left">
-        <b>一定間隔ごとに繰り返し処理を実行するJavaScriptメソッド　setInterval<br>
+        <b>setInterval メソッド<br>
           「console.log(id); // 例えば 1, 2, 3 」のようなIDを返すためIDの定義を行う必要がある。（timer.js※部分）<br>
           setInterval(関数, ミリ秒);<br>
         　関数: 実行したい関数または処理（無名関数でもOK）/　ミリ秒: 実行する間隔（1000 = 1秒）<br>
