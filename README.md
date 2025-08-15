@@ -97,9 +97,19 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 
 ## ⚪︎Making of this app 
 <details>　
-  <summary> 学習メモとしてこちらに保管しております。</summary>
+  <summary> ※作成時に気になったメソッド等、見返せるよう自身の学習メモとしてこちらに保管しております。</summary>
   <details>
-    <summary>１. ユーザビリティとデザインの工夫</summary>
-    - タイマーやストップウォッチの基本的な機能に加え、ユーザーが次にどのボタンを押すべきか視覚的、尚且つ直感的にわかるようにボタンの背景色のタイミング等工夫いたしました。
+    <summary>・非同期処理による、画面の入れ替え</summary>
+    実装箇所：「timer」「stopwatch」タブをそれぞれクリックすると、<div class="main">箇所がタブにあったビューを表示する。<br>
+    ```HTML
+        <div class="header">
+            <button class="head tab_timer" data-file="timer.html" id="tabTimer">timer</button>
+            <button class="head tab_stopwatch" data-file="stopwatch.html" id="tabStopWatch">stopwatch</button>
+        </div>
+        <div class="main">
+          <!-- switch.jsにて"timer.html""stopwatch.html"を表示 -->
+        </div>
+    ```
+    ```JavaScript
   </details>
 </details>
