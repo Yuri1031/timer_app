@@ -124,7 +124,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
               if (file === "timer.html" && !scriptLoaded.timer) {　// もしfileが"timer.html"でscriptLoaded.timer=falseの場合、
                   const script = document.createElement("script"); // ↓
                   script.src = scriptPath;                         // ↓
-                  script.id = "dynamic-script-timer";              // 「<script src="scriptPath" id="dynamic-script-timer"></script>」を作成
+                  script.id = "dynamic-script-timer";              // 各htmlのJSを対応させるため、「<script src="scriptPath" id="dynamic-script-timer"></script>」を作成
                   document.body.appendChild(script);               // body内に↑を格納
                   scriptLoaded.timer = true;                       // scriptLoaded.timer = true にする
               }
@@ -206,7 +206,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <tr>
       <td width="20%" align="left"><b>setInterval()</b></td>
       <td width="80%" align="left">
-        <b>一定間隔ごとに繰り返し処理を実行するJavaScriptメソッド。<br>
+        <b>一定間隔ごとに繰り返し処理を実行するJavaScriptメソッド　setInterval<br>
           「console.log(id); // 例えば 1, 2, 3 」のようなIDを返すためIDの定義を行う必要がある。（timer.js※部分）<br>
           setInterval(関数, ミリ秒);<br>
         　関数: 実行したい関数または処理（無名関数でもOK）/　ミリ秒: 実行する間隔（1000 = 1秒）<br>
@@ -217,7 +217,53 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     </tr>
     <tr>
       <td width="20%" align="left"><b>clearInterval()</b></td>
-      <td width="80%" align="left"><b>setInterval()の繰り返し処理を停止する。<br>setInterval()で定義したIDをclearInterval()に渡すと停止できる。</b></td>
+      <td width="80%" align="left"><b>setInterval()の繰り返し処理を停止させる。<br>setInterval()で定義したIDをclearInterval()に渡すと停止できる。</b></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary>一定間隔ごとに繰り返し処理を実行するJavaScriptメソッド　setTimeout</summary>
+  - 「start」ボタン等をそれぞれクリックすると、カウントダウンが行われる。<br>
+      
+```javascript
+   // stopwatch.js
+   function startSlideShow(category = null){　
+      clearTimeout(slideShowTimeID);
+      
+      const list = category ? quotes[category] : getAllQuotes();　// categoryがあれば、quotesから[category]を取得。なければ全て取得。
+      if (!list || list.length === 0) return;
+  
+      // random表示・// スライドショー表示間隔
+      const showRandomQuote = () => { 
+          currentShow = Math.floor(Math.random() * list.length); 　// (※１)
+          showContent(list, currentShow);
+          slideShowTimeID = setTimeout(showRandomQuote, 3500);    // (※2)
+      };
+  
+      showRandomQuote();    
+  }
+```
+  <table width="80%" cellspacing="10">
+    <tr>
+      <td width="20%" align="left"><b>Math.random()</b></td>
+      <td width="80%" align="left">
+        <b>0〜1(未満)の乱数を生成する。<br>
+          Math.random() * list.length（※１）の場合、「0〜1(未満)のランダムな数字」×「listの長さ」をcurrentShowとして定義している。
+        </b>
+      </td>
+    </tr>
+    <tr>
+      <td width="20%" align="left"><b>setTimeout()</b></td>
+      <td width="80%" align="left"><b>一定時間後に 1回だけ実行するを実行する。処理が終わってから次を実行するので 間隔が正確。<br>
+        setTimeout(関数, ミリ秒);<br>
+　      関数　: 実行したい関数または処理（無名関数でもOK）/ ミリ秒: 実行する間隔（1000 = 1秒）<br>
+        setIntervalのように繰り返し実行したい場合は、※2のように工夫が必要。<br>
+        setTimeout()で定義したIDをclearTime()に渡すと停止できる。</b></td>
+    </tr>
+    <tr>
+      <td width="20%" align="left"><b>clearTimeout()</b></td>
+      <td width="80%" align="left"><b>setTimeout()の処理を停止させる。<br>setTimeout()で定義したIDをclearTimeout()に渡すと停止できる。</b></td>
     </tr>
   </table>
 </details>
