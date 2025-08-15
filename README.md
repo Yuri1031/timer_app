@@ -110,7 +110,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
           <!-- switch.jsにて"timer.html""stopwatch.html"を表示 -->
         </div>
     ```
-
+<br>
     
     ```javascript:switch.js
        function loadPage(file, scriptPath){
@@ -141,10 +141,10 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
               });
         }
     ```
-    <table width="80%" cellspacing="10">
+  <table width="80%" cellspacing="10">
   <tr>
-    <td width="50%" align="center"><b>fetch</b></td>
-    <td width="50%" align="center">
+    <td width="30%" align="left"><b>fetch</b></td>
+    <td width="80%" align="left">
       <b>HTTPリクエスト（API通信）を非同期で行うJavaScriptのメソッド。<br>
         レスポンスそのもの（Response オブジェクト） を返すため、直接 HTML 文字列ではない。response.text() などで「中身」を取り出す必要がある。<br>
         イメージ: fetch() → 手紙をもらう / response.text() → 封筒を開けて中の手紙を読む 
@@ -152,8 +152,8 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     </td>
   </tr>
   <tr>
-    <td width="50%" align="center"><b>catch</b></td>
-    <td width="50%" align="center"><b>fetchでエラー(404など)が起きた場合の処理を記述。</b></td>
+    <td width="30%" align="left"><b>catch</b></td>
+    <td width="80%" align="left"><b>fetchでエラー(404など)が起きた場合の処理を記述。</b></td>
   </tr>
 </table>
 
