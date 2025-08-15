@@ -95,3 +95,11 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 </details>
 <br>
 
+## ⚪︎Making of this app 
+<details>　
+  <summary> 学習メモとしてこちらに保管しております。</summary>
+  <details>
+    <summary>１. ユーザビリティとデザインの工夫</summary>
+    - タイマーやストップウォッチの基本的な機能に加え、ユーザーが次にどのボタンを押すべきか視覚的、尚且つ直感的にわかるようにボタンの背景色のタイミング等工夫いたしました。
+  </details>
+</details>
