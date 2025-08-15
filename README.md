@@ -161,7 +161,41 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 </details>
 
 <details>
-  <summary>setInterval メソッド</summary>
+  <summary>タブボタンのUI更新処理</summary>
+  - クリック時のUIを設定。クリック時(アクティブ時)に色を変化させる。<br>
+      
+```html
+　　//layout.html
+    <body>
+      <div class="contents">
+          <div class="header">
+              <button class="head tab_timer" data-file="timer.html" id="tabTimer">timer</button>
+              <button class="head tab_stopwatch" data-file="stopwatch.html" id="tabStopWatch">stopwatch</button>
+          </div>
+  
+          <div class="main">
+            <!-- switch.jsにて"timer.html""stopwatch.html"を表示 -->
+          </div>
+      </div>
+    </body>
+```
+<br>
+
+```javascript
+   //switch.js
+   function tabClicked(){
+      document.querySelectorAll(".head").forEach(btn => {　　　　　　// クラスに"head"を持つ全ての要素を取得。forEachで回している現在の要素の変数名としてループ内ではbtnとして参照。
+          btn.addEventListener("click",()=>{　　　　　　　　　　　　　　// btnをクリックした際...
+              document.querySelectorAll(".head").forEach(head => head.classList.remove("active"));　　　// クラスに"head"を持つ全要素から active クラスを削除する。
+              btn.classList.add("active");                      　　// クリックされた要素(btn)に active クラスを追加。
+          });
+      }); 
+  }
+```
+</details>
+
+<details>
+  <summary>setInterval メソッドによるカウントダウン</summary>
   - 「start」ボタン等をそれぞれクリックすると、カウントダウンが行われる。<br>
       
 ```html
@@ -206,7 +240,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <tr>
       <td width="20%" align="left"><b>setInterval()</b></td>
       <td width="80%" align="left">
-        <b>setInterval メソッド<br>
+        <b>setInterval() メソッド<br>
           一定間隔ごとに繰り返し処理を実行する JavaScript メソッド。<br>
           「console.log(id); // 例えば 1, 2, 3 」のようなIDを返すためIDの定義を行う必要がある。（timer.js※部分）<br>
           setInterval(関数, ミリ秒);<br>
@@ -224,8 +258,8 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 </details>
 
 <details>
-  <summary>setTimeout メソッド</summary>
-  - 「start」ボタン等をそれぞれクリックすると、カウントダウンが行われる。<br>
+  <summary>setTimeout メソッドによるスライドショー</summary>
+  - 「boost」ボタンをそれぞれクリックすると、一定の間隔でスライドショーが実行される。<br>
       
 ```javascript
    // stopwatch.js
