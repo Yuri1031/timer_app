@@ -96,7 +96,7 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
 <br>
 
 ## ⚪︎Making of this app 
-作成時に気になったメソッド等、見返せるよう自身の学習メモとしてこちらに保管しております。</summary>
+自身の学習メモとして見返せるように、制作時に気になったことをこちらに残しております。</summary>
 <details>
   <summary>非同期処理による、画面の入れ替え</summary>
   - 「timer」「stopwatch」タブをそれぞれクリックすると、タブに対応したビューを<div class="main">箇所に表示させる。<br>
