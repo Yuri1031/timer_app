@@ -14,22 +14,31 @@ function loadPage(file, scriptPath){
         .then(response => response.text())
         .then(data => {
             document.querySelector(".main").innerHTML = data;
-            
-            if (file === "timer.html" && !scriptLoaded.timer) {
+
+            // ③
+            if (scriptPath && !document.querySelector(`#dynamic-script-${file}`)) {
                 const script = document.createElement("script");
                 script.src = scriptPath;
-                script.id = "dynamic-script-timer";
+                script.id = `dynamic-script-${file}`; // ファイルごとにユニークID
                 document.body.appendChild(script);
-                scriptLoaded.timer = true;
             }
 
-            if (file === "stopwatch.html" && !scriptLoaded.stopwatch) {
-                const script = document.createElement("script");
-                script.src = scriptPath;
-                script.id = "dynamic-script-stopwatch";
-                document.body.appendChild(script);
-                scriptLoaded.stopwatch = true;
-            }
+            // 復習により①と②を統合した③へ修正。備忘録として敢えて起こしております。
+            // ①    if (file === "timer.html" && !scriptLoaded.timer) {
+            //         const script = document.createElement("script");
+            //         script.src = scriptPath;
+            //         script.id = "dynamic-script-timer";
+            //         document.body.appendChild(script);
+            //         scriptLoaded.timer = true;
+            //     }
+
+            //  ②   if (file === "stopwatch.html" && !scriptLoaded.stopwatch) {
+            //         const script = document.createElement("script");
+            //         script.src = scriptPath;
+            //         script.id = "dynamic-script-stopwatch";
+            //         document.body.appendChild(script);
+            //         scriptLoaded.stopwatch = true;
+            //     }
         })
         .catch(error => {
             console.log('読み込みエラー:', error);
@@ -39,11 +48,11 @@ function loadPage(file, scriptPath){
 
 // click時にactive
 function tabClicked(){
-    document.querySelectorAll(".head").forEach(div => {
-        div.addEventListener("click",()=>{
+    document.querySelectorAll(".head").forEach(btn => {
+        btn.addEventListener("click",()=>{
             // active クラスを全ての head から除去, 今クリックされたタブに active を付与
             document.querySelectorAll(".head").forEach(head => head.classList.remove("active"));
-            div.classList.add("active");
+            btn.classList.add("active");
         });
     }); 
 }
