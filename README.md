@@ -147,15 +147,14 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <tr>
       <td width="20%" align="left"><b>fetch</b></td>
       <td width="80%" align="left">
-        <b>HTTPリクエスト（API通信）を非同期で行うJavaScriptメソッド。<br>
+          HTTPリクエスト（API通信）を非同期で行うJavaScriptメソッド。<br>
           レスポンスそのもの（Response オブジェクト） を返すため、直接 HTML 文字列ではない。response.text() などで「中身」を取り出す必要がある。<br>
           イメージ: fetch() → 手紙をもらう / response.text() → 封筒を開けて中の手紙を読む 
-        </b>
       </td>
     </tr>
     <tr>
       <td width="20%" align="left"><b>catch</b></td>
-      <td width="80%" align="left"><b>fetchでエラー(404など)が起きた場合の処理を記述。</b></td>
+      <td width="80%" align="left">fetchでエラー(404など)が起きた場合の処理を記述。</td>
     </tr>
   </table>
 </details>
@@ -240,19 +239,18 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <tr>
       <td width="20%" align="left"><b>setInterval()</b></td>
       <td width="80%" align="left">
-        <b>setInterval() メソッド<br>
+          setInterval() メソッド<br>
           一定間隔ごとに繰り返し処理を実行する JavaScript メソッド。<br>
           「console.log(id); // 例えば 1, 2, 3 」のようなIDを返すためIDの定義を行う必要がある。（timer.js※部分）<br>
           setInterval(関数, ミリ秒);<br>
         　関数: 実行したい関数または処理（無名関数でもOK）/　ミリ秒: 実行する間隔（1000 = 1秒）<br>
           ！注意！<br>
           実行時間が長いと、処理が間に合わずズレが出ることも。時間の正確性が重要な場面では、setTimeout() をループさせる方法もある。
-        </b>
       </td>
     </tr>
     <tr>
       <td width="20%" align="left"><b>clearInterval()</b></td>
-      <td width="80%" align="left"><b>setInterval()の繰り返し処理を停止させる。<br>setInterval()で定義したIDをclearInterval()に渡すと停止できる。</b></td>
+      <td width="80%" align="left">setInterval()の繰り返し処理を停止させる。<br>setInterval()で定義したIDをclearInterval()に渡すと停止できる。</td>
     </tr>
   </table>
 </details>
@@ -283,22 +281,23 @@ JavaScriptの理解を深めるため、個人的な実践練習として作成�
     <tr>
       <td width="20%" align="left"><b>Math.random()</b></td>
       <td width="80%" align="left">
-        <b>0〜1(未満)の乱数を生成する。<br>
+          0〜1(未満)の乱数を生成する。<br>
           Math.random() * list.length（※１）の場合、「0〜1(未満)のランダムな数字」×「listの長さ」をcurrentShowとして定義している。
-        </b>
       </td>
     </tr>
     <tr>
       <td width="20%" align="left"><b>setTimeout()</b></td>
-      <td width="80%" align="left"><b>一定時間後に1回だけ実行するを実行する。処理が終わってから次を実行するので 間隔が正確。<br>
+      <td width="80%" align="left">
+        一定時間後に1回だけ実行するを実行する。処理が終わってから次を実行するので 間隔が正確。<br>
         setTimeout(関数, ミリ秒);<br>
 　      関数　: 実行したい関数または処理（無名関数でもOK）/ ミリ秒: 実行する間隔（1000 = 1秒）<br>
         setIntervalのように繰り返し実行したい場合は、※2のように工夫が必要。<br>
-        setTimeout()で定義したIDをclearTime()に渡すと停止できる。</b></td>
+        setTimeout()で定義したIDをclearTime()に渡すと停止できる。
+      </td>
     </tr>
     <tr>
       <td width="20%" align="left"><b>clearTimeout()</b></td>
-      <td width="80%" align="left"><b>setTimeout()の処理を停止させる。<br>setTimeout()で定義したIDをclearTimeout()に渡すと停止できる。</b></td>
+      <td width="80%" align="left">setTimeout()の処理を停止させる。<br>setTimeout()で定義したIDをclearTimeout()に渡すと停止できる。</td>
     </tr>
   </table>
 </details>
